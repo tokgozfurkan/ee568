@@ -1,3 +1,14 @@
+teta=0:0.001:2*pi;
+torque_anal=2*45.27*sin(2*teta);
+plot(teta*180/pi,torque_anal,'-r','LineWidth',4);
+set(gca,'FontSize',40);
+xlabel('Theta (Degree)','FontSize',40,'FontWeight','Bold')
+ylabel('Torque (mN.m)','FontSize',40,'FontWeight','Bold')
+ xlim([0 360]);
+%  ylim([7 30]);
+grid on
+
+%%
 figure;
 plot(tetadeg,L,'-r','LineWidth',4);
 set(gca,'FontSize',40);
