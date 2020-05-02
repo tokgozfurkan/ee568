@@ -1,0 +1,37 @@
+* 6;MaxCir1.ckt
+* Project: D:/GitHub/ee568/Project-3/Project3.aedt
+* Design: MaxCir1
+
+*BeginParamDef
+*EndParamDef
+
+
+*begin toplevel circuit
+.PARAM Kle=1
+LB net_11 net_8 '0.000315597*Kle' 
+VIC net_18 net_12 DC 0 
+.PRINT TRAN PROBE VIC(t) I(VIC)
+LA net_10 net_7 '0.000315597*Kle' 
+RC net_9 net_6 0.691754
+LC net_12 net_9 '0.000315597*Kle' 
+VIB net_16 net_11 DC 0 
+.PRINT TRAN PROBE VIB(t) I(VIB)
+VIA net_14 net_10 DC 0 
+.PRINT TRAN PROBE VIA(t) I(VIA)
+VA net_14 0 SIN (0 187.794 53.3333 0 0 358.341 0) 
+IVa net_14 0 DC 0 
+.PRINT TRAN PROBE IVa(t) V(IVa)
+VB net_16 0 SIN (0 187.794 53.3333 0 0 118.341 0) 
+IVb net_16 0 DC 0 
+.PRINT TRAN PROBE IVb(t) V(IVb)
+VC net_18 0 SIN (0 187.794 53.3333 0 0 238.341 0) 
+RA net_7 net_4 0.691754
+IVc net_18 0 DC 0 
+.PRINT TRAN PROBE IVc(t) V(IVc)
+RB net_8 net_5 0.691754
+LPhaseA net_4 net_1 1 Winding
+LPhaseC net_6 net_1 1 Winding
+LPhaseB net_5 net_1 1 Winding
+
+*end toplevel circuit
+.end
